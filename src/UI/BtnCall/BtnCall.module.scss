@@ -1,0 +1,12 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.call {
+  cursor: pointer;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #465a69;
+  @include flex;
+}

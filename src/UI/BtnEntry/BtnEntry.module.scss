@@ -1,0 +1,13 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.entry {
+  cursor: pointer;
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 4px;
+  background: #465a69;
+  @include flex;
+  padding: 0 15px;
+}

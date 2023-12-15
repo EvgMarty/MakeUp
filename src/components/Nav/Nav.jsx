@@ -1,7 +1,7 @@
 import styles from './Nav.module.scss';
 import { ROUTES } from '../../utils/routes';
-
 import { NavLink } from 'react-router-dom';
+
 const Nav = () => {
   return (
     <nav className={styles.nav}>
@@ -23,7 +23,7 @@ const Nav = () => {
             }
             to={ROUTES.PRICE}
           >
-            Ціна
+            Ціни
           </NavLink>
         </li>
         <li>

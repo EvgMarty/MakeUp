@@ -1,0 +1,56 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.burger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+
+  @media (min-width: 650px) {
+    display: none;
+  }
+
+  span {
+    height: 2px;
+    width: 80%;
+    background: var(--text-menu);
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--text-menu);
+    @include transition;
+  }
+
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+  &.activ {
+    span {
+      scale: 0;
+    }
+
+    &::after {
+      bottom: 50%;
+      rotate: -45deg;
+      translate: 0, -50%;
+    }
+
+    &::before {
+      top: 50%;
+      rotate: 45deg;
+      translate: 0, 50%;
+    }
+  }
+}

@@ -3,6 +3,10 @@
 
 .nav {
   height: 100%;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 }
 
 .navList {

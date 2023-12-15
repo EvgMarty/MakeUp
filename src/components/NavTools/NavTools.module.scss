@@ -1,0 +1,10 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.navTools {
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+}
