@@ -1,0 +1,17 @@
+:root {
+  /* Light mode */
+  --text-color: #000;
+  --pageBg: #f9f9f9;
+  --text-menu: #4a5c66;
+  --menuBg: #f9f9f9;
+  --borderBottom: #ce6a85;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  --text-color: #fff;
+  --pageBg: #141221;
+  --text-menu: #3a5a40;
+  --menuBg: #201d31;
+  --borderBottom: #8378d5;
+}

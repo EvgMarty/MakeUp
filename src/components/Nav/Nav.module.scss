@@ -1,0 +1,52 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.nav {
+  height: 100%;
+}
+
+.navList {
+  height: 100%;
+  display: flex;
+  gap: 35px;
+}
+
+.link {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+
+  @include transition;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    border-radius: 2px;
+    height: 2px;
+    background: var(--borderBottom);
+    transition: all 0.05s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+}

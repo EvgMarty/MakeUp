@@ -1,0 +1,9 @@
+@import './mixins.scss';
+@import './var.scss';
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;800&display=swap');
+
+body {
+  background: var(--pageBg);
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+}
