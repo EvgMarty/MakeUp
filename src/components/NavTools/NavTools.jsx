@@ -9,10 +9,10 @@ const NavTools = (props) => {
 
   return (
     <div className={styles.navTools}>
-      <BtnCall>
+      <BtnCall hideOnMobile={true}>
         <FaPhoneAlt />
       </BtnCall>
-      <BtnEntry>ЗАПИС</BtnEntry>
+      <BtnEntry hideOnMobile={true}>ЗАПИС</BtnEntry>
       <BtnBurgerMenu active={active} toggleBurgerMenu={toggleBurgerMenu} />
     </div>
   );

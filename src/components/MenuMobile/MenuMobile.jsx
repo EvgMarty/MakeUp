@@ -1,8 +1,10 @@
-import NavMobile from '../NavMobile/NavMobile';
 import styles from './MenuMobile.module.scss';
+import NavMobile from '../NavMobile/NavMobile';
+import { FaPhoneAlt } from 'react-icons/fa';
+import BtnCall from '../../UI/BtnCall/BtnCall';
+import BtnEntry from '../../UI/BtnEntry/BtnEntry';
 
 const MenuMobile = ({ active, closeBurgerMenu }) => {
-  console.log(active);
   return (
     <div
       className={
@@ -10,6 +12,12 @@ const MenuMobile = ({ active, closeBurgerMenu }) => {
       }
     >
       <NavMobile closeBurgerMenu={closeBurgerMenu} />
+      <div className={styles.toolsWraper}>
+        <BtnCall>
+          <FaPhoneAlt />
+        </BtnCall>
+        <BtnEntry closeBurgerMenu={closeBurgerMenu}>ЗАПИС</BtnEntry>
+      </div>
     </div>
   );
 };

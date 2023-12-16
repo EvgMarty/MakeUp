@@ -17,7 +17,6 @@ const Menu = () => {
     setActive(false);
   };
 
-  
   return (
     <>
       <div className={styles.menu}>
