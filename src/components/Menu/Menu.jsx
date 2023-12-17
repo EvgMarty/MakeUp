@@ -4,6 +4,7 @@ import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
 import NavTools from '../NavTools/NavTools';
 import MenuMobile from '../MenuMobile/MenuMobile';
+import Cart from '../Cart/Cart';
 
 const Menu = () => {
   // burger menu
@@ -17,6 +18,17 @@ const Menu = () => {
     setActive(false);
   };
 
+  // Cart menu
+  const [activeCart, setActiveCart] = useState(false);
+
+  const openCart = () => {
+    setActiveCart(true);
+  };
+
+  const closeCart = () => {
+    setActiveCart(false);
+  };
+
   return (
     <>
       <div className={styles.menu}>
@@ -24,11 +36,21 @@ const Menu = () => {
           <div className={styles.menuWrapper}>
             <Logo />
             <Nav />
-            <NavTools active={active} toggleBurgerMenu={toggleBurgerMenu} />
+            <NavTools
+              active={active}
+              openCart={openCart}
+              toggleBurgerMenu={toggleBurgerMenu}
+            />
           </div>
         </div>
       </div>
-      <MenuMobile active={active} closeBurgerMenu={closeBurgerMenu} />
+
+      <Cart activeCart={activeCart} closeCart={closeCart} />
+      <MenuMobile
+        active={active}
+        openCart={openCart}
+        closeBurgerMenu={closeBurgerMenu}
+      />
     </>
   );
 };

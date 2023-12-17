@@ -1,0 +1,99 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.modalWindow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background: #000000ba;
+  backdrop-filter: blur(1px);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 3;
+
+  &.active {
+    opacity: 1;
+    height: 100%;
+    transform: translateY(0);
+  }
+}
+
+.cart {
+  position: relative;
+  @include absolutCentr;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 650px;
+  padding: 20px;
+  z-index: 4;
+  opacity: 1;
+
+  @media (max-width: 650px) {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    justify-content: center;
+  }
+
+  .cartTitle {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+
+.btnCloseCart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  @media (max-width: 650px) {
+    top: 14%;
+    right: -1%;
+  }
+}
+
+.cartForm {
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+}
+
+.emptyCatr {
+  padding: 20px 0;
+  border-top: 1px solid var(--borderBottom);
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  gap: 15px;
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+  }
+
+  .emptyTitle {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.totalCost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 0 0;
+  border-top: 1px solid var(--borderBottom);
+
+  .price {
+    font-weight: 700;
+    font-size: 40px;
+  }
+}

@@ -3,20 +3,22 @@
 
 .call {
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--pageBg);
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: var(--btnBg);
+  background: var(--text-menu);
   @include flex;
 
-  &:hover {
-    background: #adb5bd;
-  }
+
 
   &.hideOnMobile {
     @media (max-width: 650px) {
       display: none;
     }
+  }
+
+  &:active {
+    transform: translateY(2px);
   }
 }

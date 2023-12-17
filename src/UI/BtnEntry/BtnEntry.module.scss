@@ -12,12 +12,16 @@
   padding: 0 15px;
 
   &:hover {
-    background: #adb5bd;
+    background: var( --btnBgHover);
   }
 
   &.hideOnMobile {
     @media (max-width: 650px) {
       display: none;
     }
+  }
+
+  &:active {
+    transform: translateY(2px);
   }
 }

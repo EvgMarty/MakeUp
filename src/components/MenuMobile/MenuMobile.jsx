@@ -4,7 +4,9 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import BtnCall from '../../UI/BtnCall/BtnCall';
 import BtnEntry from '../../UI/BtnEntry/BtnEntry';
 
-const MenuMobile = ({ active, closeBurgerMenu }) => {
+const MenuMobile = (props) => {
+  const { active, closeBurgerMenu, openCart } = props;
+  
   return (
     <div
       className={
@@ -16,7 +18,14 @@ const MenuMobile = ({ active, closeBurgerMenu }) => {
         <BtnCall>
           <FaPhoneAlt />
         </BtnCall>
-        <BtnEntry closeBurgerMenu={closeBurgerMenu}>ЗАПИС</BtnEntry>
+        <BtnEntry
+          onClick={() => {
+            openCart();
+            closeBurgerMenu();
+          }}
+        >
+          ЗАПИС
+        </BtnEntry>
       </div>
     </div>
   );
