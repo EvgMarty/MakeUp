@@ -3,18 +3,22 @@
 
 .entry {
   cursor: pointer;
-  color: var(--text-color);
   height: 40px;
   font-size: 15px;
   border-radius: 4px;
-  background: var(--btnBg);
   @include flex;
   padding: 0 15px;
 
-  &:hover {
-    background: var( --btnBgHover);
-  }
+  @include transition;
 
+  color: var(--colorBtn);
+  background: var(--bgBtn);
+  border: 2px solid var(--borderBtn);
+
+  &:hover {
+    color: var(--colorBtnHover);
+    background: var(--bgBtnHover);
+  }
   &.hideOnMobile {
     @media (max-width: 650px) {
       display: none;

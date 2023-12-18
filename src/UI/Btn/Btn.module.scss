@@ -11,13 +11,15 @@
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  @include transition;
 
-  color: var( --text-menu);
-  background: var(--btnBg);
+  color: var(--colorBtn);
+  background: var(--bgBtn);
+  border: 2px solid var(--borderBtn);
 
   &:hover {
-    background: var(--btnBgHover);
+    color: var(--colorBtnHover);
+    background: var(--bgBtnHover);
   }
 
   &:active {
