@@ -56,6 +56,7 @@ const SliderComponent = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   className={styles.overlayText}
+                  style={index === 2 ? { top: '12%' } : null}
                 >
                   <p>{slideContents[index].title}</p>
                   <h3>{slideContents[index].description}</h3>

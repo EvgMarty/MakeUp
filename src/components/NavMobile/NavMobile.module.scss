@@ -7,10 +7,10 @@
   flex-direction: column;
   padding: 100px 25px;
   gap: 25px;
+  background: var(--pageBg);
 }
 
 .navItemMob {
-  color: var(--text-color);
   font-weight: 500;
   font-size: 30px;
   color: var(--text-menu);

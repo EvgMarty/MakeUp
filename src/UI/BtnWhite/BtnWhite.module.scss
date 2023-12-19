@@ -1,9 +1,9 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/var.scss';
 
-.btn {
+.btnWhite {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 10px 15px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -12,17 +12,23 @@
   border: none;
   border-radius: 4px;
   @include transition;
+  max-width: 200px;
 
-  color: var(--colorBtn);
-  background: var(--bgBtn);
-  border: 2px solid var(--borderBtn);
+  color: var(--colorBtnW);
+  border: 2px solid var(--borderBtnW);
 
   &:hover {
-    color: var(--colorBtnHover);
-    background: var(--bgBtnHover);
+    color: var(--colorBtnHoverW);
+    background: var(--bgBtnHoverW);
   }
 
   &:active {
     transform: translateY(2px);
+  }
+
+  &.hideOnMobile {
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 }

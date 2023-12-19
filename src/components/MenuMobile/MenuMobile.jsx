@@ -1,12 +1,12 @@
 import styles from './MenuMobile.module.scss';
 import NavMobile from '../NavMobile/NavMobile';
 import { FaPhoneAlt } from 'react-icons/fa';
-import BtnCall from '../../UI/BtnCall/BtnCall';
-import BtnEntry from '../../UI/BtnEntry/BtnEntry';
+import BtnBlack from '../../UI/BtnBlack/BtnBlack';
+import BtnTotalBlack from '../../UI/BtnTotalBlack/BtnTotalBlack';
 
 const MenuMobile = (props) => {
   const { active, closeBurgerMenu, openCart } = props;
-  
+
   return (
     <div
       className={
@@ -15,17 +15,20 @@ const MenuMobile = (props) => {
     >
       <NavMobile closeBurgerMenu={closeBurgerMenu} />
       <div className={styles.toolsWraper}>
-        <BtnCall>
-          <FaPhoneAlt />
-        </BtnCall>
-        <BtnEntry
+        <BtnTotalBlack>
+          <a href="tel:+380509344650">
+            <FaPhoneAlt />
+          </a>
+        </BtnTotalBlack>
+
+        <BtnBlack
           onClick={() => {
             openCart();
             closeBurgerMenu();
           }}
         >
-          ЗАПИС
-        </BtnEntry>
+          Запис
+        </BtnBlack>
       </div>
     </div>
   );

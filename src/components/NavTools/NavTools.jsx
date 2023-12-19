@@ -1,17 +1,22 @@
 import styles from './NavTools.module.scss';
-import BtnCall from '../../UI/BtnCall/BtnCall';
-import BtnEntry from '../../UI/BtnEntry/BtnEntry';
+import { FaPhoneAlt } from 'react-icons/fa';
 import BtnBurgerMenu from '../../UI/BtnBurgerMenu/BtnBurgerMenu';
+import BtnBlack from '../../UI/BtnBlack/BtnBlack';
+import BtnTotalBlack from '../../UI/BtnTotalBlack/BtnTotalBlack';
 
 const NavTools = (props) => {
   const { active, toggleBurgerMenu, openCart } = props;
 
   return (
     <div className={styles.navTools}>
-      <BtnCall hideOnMobile={true} />
-      <BtnEntry onClick={openCart} hideOnMobile={true}>
-        ЗАПИС
-      </BtnEntry>
+      <BtnTotalBlack hideOnMobile={true}>
+        <a href="tel:+380509344650">
+          <FaPhoneAlt />
+        </a>
+      </BtnTotalBlack>
+      <BtnBlack onClick={openCart} hideOnMobile={true}>
+        Запис
+      </BtnBlack>
       <BtnBurgerMenu active={active} toggleBurgerMenu={toggleBurgerMenu} />
     </div>
   );

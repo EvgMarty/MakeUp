@@ -5,17 +5,13 @@
   @include flex;
   width: 30px;
   height: 30px;
-  background: var(--text-menu);
+  background: var(--totalBlackBtnBg);
   border-radius: 6px;
-  color: var(--btnBg);
+  color: var(--totalBlackBtnColor);
 
   @media (max-width: 650px) {
     width: 45px;
     height: 45px;
-  }
-
-  &:hover {
-    background: var(--text-menu);
   }
 
   &:active {

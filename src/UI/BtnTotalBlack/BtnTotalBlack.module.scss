@@ -1,16 +1,14 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/var.scss';
 
-.call {
+.btnTotalBlack {
   cursor: pointer;
-  color: var(--pageBg);
-  width: 40px;
-  height: 40px;
+  color: var(--totalBlackBtnColor);
+  width: 42px;
+  height: 42px;
   border-radius: 4px;
-  background: var(--text-menu);
+  background: var(--totalBlackBtnBg);
   @include flex;
-
-
 
   &.hideOnMobile {
     @media (max-width: 650px) {
