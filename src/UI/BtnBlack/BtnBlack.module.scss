@@ -12,9 +12,10 @@
   border: none;
   border-radius: 4px;
   @include transition;
+  max-width: 200px;
 
   color: var(--colorBtn);
-  background: var(--bgBtn);
+
   border: 2px solid var(--borderBtn);
 
   &:hover {

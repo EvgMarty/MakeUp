@@ -1,9 +1,12 @@
 import styles from './SliderComponent.module.scss';
-import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { ROUTES } from '../../utils/routes';
+import BtnBlack from '../../UI/BtnBlack/BtnBlack';
+import { Link } from 'react-router-dom';
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -27,18 +30,24 @@ const SliderComponent = () => {
       title: 'Для кожної красуні - свій візажист',
       description: 'Зі мною ви станете чарівними',
       descrip:
-        'Я підкреслю вашу природну красу і додам трохи магії у ваш образ!',
+      'Я підкреслю вашу природну красу і додам трохи магії у ваш образ!',
+      btnTitle: 'Прайс',
+      link: ROUTES.PRICE,
     },
     {
       title: '',
       description: 'Довіряй професіоналу',
       descrip:
-        'Я створю унікальний образ, щоб ти почувалася впевнено і привабливо!',
+      'Я створю унікальний образ, щоб ти почувалася впевнено і привабливо!',
+      btnTitle: 'Прайс',
+      link: ROUTES.PRICE,
     },
     {
       title: 'Курси',
       description: 'Стань майстром у світі краси та мистецтва макіяжу',
       descrip: 'Почни свій шлях із моїх професійних курсів!',
+      btnTitle: 'Детальніше',
+      link: ROUTES.COURSE,
     },
   ];
 
@@ -56,11 +65,16 @@ const SliderComponent = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   className={styles.overlayText}
-                  style={index === 2 ? { top: '12%' } : null}
+                  style={index === 2 ? { top: '14%' } : null}
                 >
                   <p>{slideContents[index].title}</p>
                   <h3>{slideContents[index].description}</h3>
                   <h5>{slideContents[index].descrip}</h5>
+                  <BtnBlack>
+                    <Link to={slideContents[index].link}>
+                      {slideContents[index].btnTitle}
+                    </Link>
+                  </BtnBlack>
                 </motion.div>
               )}
             </AnimatePresence>
