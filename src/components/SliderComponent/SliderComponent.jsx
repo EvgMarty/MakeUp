@@ -30,7 +30,7 @@ const SliderComponent = () => {
       title: 'Для кожної красуні - свій візажист',
       description: 'Зі мною ви станете чарівними',
       descrip:
-      'Я підкреслю вашу природну красу і додам трохи магії у ваш образ!',
+        'Я підкреслю вашу природну красу і додам трохи магії у ваш образ!',
       btnTitle: 'Прайс',
       link: ROUTES.PRICE,
     },
@@ -38,7 +38,7 @@ const SliderComponent = () => {
       title: '',
       description: 'Довіряй професіоналу',
       descrip:
-      'Я створю унікальний образ, щоб ти почувалася впевнено і привабливо!',
+        'Я створю унікальний образ, щоб ти почувалася впевнено і привабливо!',
       btnTitle: 'Прайс',
       link: ROUTES.PRICE,
     },
@@ -65,7 +65,6 @@ const SliderComponent = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   className={styles.overlayText}
-                  style={index === 2 ? { top: '14%' } : null}
                 >
                   <p>{slideContents[index].title}</p>
                   <h3>{slideContents[index].description}</h3>
