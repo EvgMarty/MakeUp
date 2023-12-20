@@ -28,19 +28,24 @@
     .link {
       color: var(--footerColor);
 
+      .icon {
+        @include transition;
+        width: 30px;
+        height: 30px;
+      }
+
       &:hover {
         color: var(--hoverLink);
-      }
-    }
 
-    .icon {
-      width: 30px;
-      height: 30px;
+        .icon {
+          transform: scale(1.1) rotate(-5deg);
+        }
+      }
     }
   }
 
-  p {
-    color: #fff;
+  .allRight {
+    color: #909090;
 
     @media (max-width: 500px) {
       font-size: 12px;
