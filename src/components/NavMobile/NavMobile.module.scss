@@ -16,7 +16,7 @@
 }
 
 .link {
-  padding: 25px 0  25px 15px;
+  padding: 25px 0 25px 15px;
   display: inline-block;
   width: 100%;
 
@@ -27,7 +27,7 @@
 
   &.active {
     font-weight: 700;
-    background: var(--active);
+    background: var(--hoverActive);
     border-right: 6px solid var(--hoverLink);
   }
 }

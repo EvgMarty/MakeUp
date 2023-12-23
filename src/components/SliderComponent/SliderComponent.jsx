@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ROUTES } from '../../utils/routes';
-import BtnBlack from '../../UI/BtnBlack/BtnBlack';
 import { Link } from 'react-router-dom';
+import BtnBlack from '../../UI/BtnBlack/BtnBlack';
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -27,6 +27,13 @@ const SliderComponent = () => {
 
   const slideContents = [
     {
+      title: '',
+      description: 'Довіряй професіоналу',
+      descrip: 'З моїм макіяжем та зачіскою будеш найгарнішою!',
+      btnTitle: 'Прайс',
+      link: ROUTES.PRICE,
+    },
+    {
       title: 'Для кожної красуні - свій візажист',
       description: 'Зі мною ви станете чарівними',
       descrip:
@@ -34,14 +41,7 @@ const SliderComponent = () => {
       btnTitle: 'Прайс',
       link: ROUTES.PRICE,
     },
-    {
-      title: '',
-      description: 'Довіряй професіоналу',
-      descrip:
-        'Я створю унікальний образ, щоб ти почувалася впевнено і привабливо!',
-      btnTitle: 'Прайс',
-      link: ROUTES.PRICE,
-    },
+
     {
       title: 'Курси',
       description: 'Стань майстром у світі краси та мистецтва макіяжу',
