@@ -4,12 +4,14 @@
 .sectionGroup {
   @include flex;
   flex-wrap: wrap;
+
   justify-content: space-between;
   padding: 25px 0;
 
   @media (max-width: 1250px) {
     justify-content: center;
     flex-direction: column;
+    gap: 25px;
   }
 }
 .icon {
@@ -61,10 +63,4 @@
       margin-top: 10%;
     }
   }
-}
-
-.instWrapper {
-  max-width: 400px;
-  height: 500px;
-  background: green;
 }

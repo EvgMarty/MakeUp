@@ -3,6 +3,7 @@ import Container from '../Container/Container';
 
 import { FaInstagram } from 'react-icons/fa';
 import BtnTotalBlack from '../../UI/BtnTotalBlack/BtnTotalBlack';
+import Gallery from '../Gallery/Gallery';
 
 const InstaSection = () => {
   return (
@@ -25,7 +26,7 @@ const InstaSection = () => {
               <img src="/img/inst/photoReals_2.jpg" alt="" />
             </div>
           </div>
-          <div className={styles.instWrapper}></div>
+          <Gallery />
         </div>
       </Container>
     </div>
