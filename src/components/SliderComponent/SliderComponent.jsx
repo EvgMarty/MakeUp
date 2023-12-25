@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ROUTES } from '../../utils/routes';
-import { Link } from 'react-router-dom';
 import BtnBlack from '../../UI/BtnBlack/BtnBlack';
 
 const SliderComponent = () => {
@@ -69,10 +68,8 @@ const SliderComponent = () => {
                   <p>{slideContents[index].title}</p>
                   <h3>{slideContents[index].description}</h3>
                   <h5>{slideContents[index].descrip}</h5>
-                  <BtnBlack>
-                    <Link to={slideContents[index].link}>
-                      {slideContents[index].btnTitle}
-                    </Link>
+                  <BtnBlack to={slideContents[index].link}>
+                    {slideContents[index].btnTitle}
                   </BtnBlack>
                 </motion.div>
               )}

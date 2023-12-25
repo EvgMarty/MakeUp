@@ -1,9 +1,9 @@
 import styles from './Course.module.scss';
-
+import Crumbs from '../../components/Сrumbs/Сrumbs';
 const Course = () => {
   return (
     <div className={styles.course}>
-      <h1>Course</h1>
+      <Crumbs page="Курси" />
     </div>
   );
 };

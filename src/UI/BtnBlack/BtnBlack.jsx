@@ -1,16 +1,13 @@
 import styles from './BtnBlack.module.scss';
+import { Link } from 'react-router-dom';
 
 const BtnBlack = (props) => {
-  const { children, onClick, title, hideOnMobile } = props;
-  
-  const classNames = hideOnMobile
-    ? `${styles.btnBlack} ${styles.hideOnMobile}`
-    : styles.btnBlack;
+  const { children, to } = props;
 
   return (
-    <button className={classNames} onClick={onClick} title={title}>
+    <Link className={styles.btnBlack} to={to}>
       {children}
-    </button>
+    </Link>
   );
 };
 

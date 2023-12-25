@@ -2,8 +2,11 @@
 @import '../../styles/var.scss';
 
 .btnBlack {
-  display: inline-block;
-  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 25px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -15,8 +18,12 @@
   max-width: 200px;
 
   color: var(--colorBtn);
-
   border: 2px solid var(--borderBtn);
+
+  @media (max-width: 500px) {
+    padding: 12px 40px;
+    font-size: 14px;
+  }
 
   &:hover {
     color: var(--colorBtnHover);

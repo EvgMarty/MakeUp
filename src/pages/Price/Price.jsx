@@ -1,9 +1,10 @@
 import styles from './Price.module.scss';
+import Crumbs from '../../components/Сrumbs/Сrumbs'
 
 const Price = () => {
   return (
     <div className={styles.price}>
-      <h1>Price</h1>
+      <Crumbs page='Ціни' />
     </div>
   );
 };

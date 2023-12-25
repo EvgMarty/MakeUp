@@ -1,0 +1,27 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.btnCall {
+  cursor: pointer;
+  color: var(--totalBlackBtnColor);
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  background: var(--totalBlackBtnBg);
+  @include flex;
+  @include transition;
+
+  &.hideOnMobile {
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:hover {
+    scale: 1.05;
+  }
+}
