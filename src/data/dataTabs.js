@@ -20,15 +20,6 @@ const tabItem = [
   {
     img: '/img/tabs/client_1.png',
   },
-  {
-    img: '/img/tabs/client_1.png',
-  },
-  {
-    img: '/img/tabs/client_1.png',
-  },
-  {
-    img: '/img/tabs/client_1.png',
-  },
 ];
 
 const tabContent = [
@@ -67,20 +58,6 @@ const tabContent = [
     name: 'Анастасія Бабіч',
     img: '/img/tabs/client_1.png',
   },
-  {
-    text: 'Дякую и всего хорошего',
-    name: 'Анастасія Бабіч',
-    img: '/img/tabs/client_1.png',
-  },
-  {
-    text: 'Дякую и всего хорошего',
-    name: 'Анастасія Бабіч',
-    img: '/img/tabs/client_1.png',
-  },
-  {
-    text: 'Дякую и всего хорошего',
-    name: 'Анастасія Бабіч',
-    img: '/img/tabs/client_1.png',
-  },
 ];
+
 export { tabItem, tabContent };

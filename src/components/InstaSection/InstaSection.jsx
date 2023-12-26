@@ -13,7 +13,7 @@ const InstaSection = () => {
           <div className={styles.titleWrapper}>
             <h4>Мої роботи</h4>
             <p>Переглянути мої роботи можна в інстраграмі</p>
-            <BtnTotalBlack to="https://www.instagram.com/">
+            <BtnTotalBlack to="https://www.instagram.com/babichkaa__/">
               <FaInstagram className={styles.icon} />
               <p>Instagram</p>
             </BtnTotalBlack>
