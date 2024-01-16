@@ -7,7 +7,7 @@ const Gallery = () => {
     <ul className={styles.gallery}>
       {galleryInst.map((item, i) => {
         return (
-          <li className={styles.galleryItem}>
+          <li key={i} className={styles.galleryItem}>
             <Link to={item.link}>
               <img src={item.img} alt="" />
             </Link>

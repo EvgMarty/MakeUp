@@ -17,6 +17,7 @@
 }
 
 .listItem {
+  cursor: pointer;
   @include flex;
   flex: 0 0 auto;
   width: 100px;
@@ -84,11 +85,10 @@
 
     overflow: hidden;
 
-    
-  @media (max-width: 500px) {
-    width: 80px;
-    height: 80px;
-  }
+    @media (max-width: 500px) {
+      width: 80px;
+      height: 80px;
+    }
 
     img {
       width: 100%;

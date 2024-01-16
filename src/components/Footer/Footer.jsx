@@ -24,7 +24,9 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p className={styles.allRight}>© 2023 Anastasia Babich. All Rights Reserved.</p>
+      <p className={styles.allRight}>
+        © 2024 Anastasia Babich. All Rights Reserved.
+      </p>
     </div>
   );
 };
