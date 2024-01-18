@@ -1,0 +1,19 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.addCard {
+  @include flex;
+  color: var(--text-colorW);
+  border: 3px solid var(--text-colorW);
+  border-radius: 4px;
+  padding: 5px;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &.active {
+    background: var(--bgBtnHover);
+    border: 3px solid var(--bgBtnHover);
+  }
+}

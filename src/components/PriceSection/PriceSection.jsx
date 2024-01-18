@@ -1,55 +1,23 @@
 import styles from './PriceSection.module.scss';
+import { v4 as uuidv4 } from 'uuid';
+import { services } from '../../data/dataService';
+import ServicesCard from '../ServicesCard/ServicesCard';
 
 const PriceSection = () => {
+  const addUniqueId = (array) => {
+    return array.map((item) => ({ ...item, id: uuidv4() }));
+  };
+  
+  //added id
+  const servicessAddId = addUniqueId(services);
+
   return (
     <div className={styles.priceSection}>
       <h1>Ціни на послуги</h1>
       <div className={styles.servicesWrapper}>
-        <div className={styles.servicesCard}>
-          <img
-            className={styles.imgCard}
-            src="/img/services/makeup.jpg"
-            alt=""
-          />
-          <div className={styles.addCard}>
-            <p className={styles.text}>Макіяж</p>
-            <button>+</button>
-          </div>
-        </div>
-        <div className={styles.servicesCard}>
-          <img
-            className={styles.imgCard}
-            src="/img/services/hairstyle.jpg"
-            alt=""
-          />
-          <div className={styles.addCard}>
-            <p className={styles.text}>укладка зачіска</p>
-            <button>+</button>
-          </div>
-        </div>
-
-        <div className={styles.servicesCard}>
-          <img
-            className={styles.imgCard}
-            src="/img/services/eyebrows.jpg"
-            alt=""
-          />
-          <div className={styles.addCard}>
-            <p className={styles.text}>Брови</p>
-            <button>+</button>
-          </div>
-        </div>
-        <div className={styles.servicesCard}>
-          <img
-            className={styles.imgCard}
-            src="/img/services/wedding.jpg"
-            alt=""
-          />
-          <div className={styles.addCard}>
-            <p className={styles.text}>Повний образ</p>
-            <button>+</button>
-          </div>
-        </div>
+        {servicessAddId.map((item) => {
+          return <ServicesCard key={item.id} {...item} />;
+        })}
       </div>
     </div>
   );
