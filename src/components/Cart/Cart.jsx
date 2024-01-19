@@ -1,8 +1,9 @@
 import styles from './Cart.module.scss';
+import { useState } from 'react';
 import Form from '../Form/Form';
 import BtnClose from '../../UI/BtnClose/BtnClose';
-import { useState } from 'react';
 import BtnBlack from '../../UI/BtnBlack/BtnBlack';
+import ServiceInСart from '../ServiceInСart/ServiceInСart';
 
 const Cart = ({ activeCart, closeCart }) => {
   const clasNameCart = activeCart
@@ -49,11 +50,16 @@ const Cart = ({ activeCart, closeCart }) => {
             handleSubmit={handleSubmit}
           />
         </div>
-        <div className={styles.mappingCart}></div>
-        <div className={styles.emptyCatr}>
+        <div className={styles.mappingCart}>
+          <ServiceInСart />
+          <ServiceInСart />
+          <ServiceInСart />
+          <ServiceInСart />
+        </div>
+        {/* <div className={styles.emptyCatr}>
           <h5 className={styles.emptyTitle}>Кошик порожній</h5>
           <p>Спочатку додайте послуги до кошику.</p>
-        </div>
+        </div> */}
         <div className={styles.totalCost}>
           <BtnBlack onClick={handleSubmit}>Записатися</BtnBlack>
           <span className={styles.price}>0</span>

@@ -1,0 +1,42 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.serviceInСart {
+  width: 100%;
+  padding: 10px 10px;
+  @include flex;
+  justify-content: space-between;
+
+  &:nth-child(even) {
+    background-color: rgb(211, 211, 211);
+  }
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 550;
+}
+
+.priceWrapper {
+  @include flex;
+  gap: 15px;
+}
+
+.btntogle {
+  @include flex;
+  width: 21px;
+  height: 22px;
+  font-weight: 700;
+  border: 2px solid var(--bgBtnHover);
+  border-radius: 4px;
+
+  &.min {
+    color: var(--text-colorW);
+    background: var(-bgBtnHover);
+  }
+}
