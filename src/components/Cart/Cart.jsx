@@ -1,5 +1,7 @@
 import styles from './Cart.module.scss';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectCart } from '../../redux/slices/cart';
 import Form from '../Form/Form';
 import BtnClose from '../../UI/BtnClose/BtnClose';
 import BtnBlack from '../../UI/BtnBlack/BtnBlack';
@@ -36,6 +38,11 @@ const Cart = ({ activeCart, closeCart }) => {
     resetForm();
   };
 
+  //redux
+  const cart = useSelector(selectCart);
+
+  const cartTotalPrice = cart.reduce((total, item) => total + item.price, 0);
+
   return (
     <div className={clasNameCart} onClick={handleClick}>
       <div className={styles.cart}>
@@ -50,19 +57,22 @@ const Cart = ({ activeCart, closeCart }) => {
             handleSubmit={handleSubmit}
           />
         </div>
-        <div className={styles.mappingCart}>
-          <ServiceInСart />
-          <ServiceInСart />
-          <ServiceInСart />
-          <ServiceInСart />
-        </div>
-        {/* <div className={styles.emptyCatr}>
-          <h5 className={styles.emptyTitle}>Кошик порожній</h5>
-          <p>Спочатку додайте послуги до кошику.</p>
-        </div> */}
+
+        {cart.length > 0 ? (
+          <div className={styles.mappingCart}>
+            {cart.map((item) => (
+              <ServiceInСart key={item.id} {...item} />
+            ))}
+          </div>
+        ) : (
+          <div className={styles.emptyCatr}>
+            <h5 className={styles.emptyTitle}>Кошик порожній</h5>
+            <p>Спочатку додайте послуги до кошику.</p>
+          </div>
+        )}
         <div className={styles.totalCost}>
           <BtnBlack onClick={handleSubmit}>Записатися</BtnBlack>
-          <span className={styles.price}>0</span>
+          <span className={styles.price}>{cartTotalPrice} ₴</span>
         </div>
       </div>
     </div>
