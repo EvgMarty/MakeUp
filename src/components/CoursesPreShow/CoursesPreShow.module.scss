@@ -1,0 +1,47 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/var.scss';
+
+.preShow {
+  @include flex;
+  gap: 25px;
+  padding: 15px 0 40px 0;
+
+  @media (max-width: 800px) {
+    gap: 10px;
+  }
+}
+
+.item {
+  width: 200px;
+  height: 280px;
+  background: #000;
+  overflow: hidden;
+  border-radius: 4px;
+  @include transition;
+
+  @media (max-width: 600px) {
+    cursor: pointer;
+    flex: 0 0 100px;
+  }
+
+  @media (max-width: 500px) {
+    flex: 0 0 70px;
+  }
+
+  @media (max-width: 400px) {
+    flex: 0 0 60px;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.active {
+    @media (max-width: 600px) {
+      flex: 1;
+      background: red;
+    }
+  }
+}

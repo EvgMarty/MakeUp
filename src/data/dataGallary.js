@@ -50,4 +50,11 @@ const galleryInst = [
   },
 ];
 
-export { galleryInst };
+const galleryCourse = [
+  '/img/inst/gallery_1.png',
+  '/img/inst/gallery_2.png',
+  '/img/inst/gallery_12.png',
+  '/img/inst/gallery_5.png',
+];
+
+export { galleryInst, galleryCourse };
