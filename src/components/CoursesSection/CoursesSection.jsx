@@ -1,7 +1,5 @@
 import styles from './CoursesSection.module.scss';
-
 import Title from '../Title/Title';
-
 import CoursesPreShow from '../CoursesPreShow/CoursesPreShow';
 
 const CoursesSection = () => {
@@ -20,8 +18,6 @@ const CoursesSection = () => {
 
       {/* Предпоказ робіт */}
       <CoursesPreShow />
-
-      <Title>Індивідуальні заняття</Title>
     </div>
   );
 };
