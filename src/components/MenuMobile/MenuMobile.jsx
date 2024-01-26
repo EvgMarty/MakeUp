@@ -5,7 +5,7 @@ import BtnCall from '../../UI/BtnCall/BtnCall';
 import CartBtn from '../../UI/CartBtn/CartBtn';
 
 const MenuMobile = (props) => {
-  const { active, closeBurgerMenu, openCart } = props;
+  const { active, closeBurgerMenu, openCart, cartItem } = props;
 
   return (
     <div
@@ -22,6 +22,7 @@ const MenuMobile = (props) => {
         </BtnCall>
 
         <CartBtn
+          cartItem={cartItem}
           onClick={() => {
             openCart();
             closeBurgerMenu();

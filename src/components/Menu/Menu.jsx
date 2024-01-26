@@ -1,5 +1,7 @@
 import styles from './Menu.module.scss';
 import { useState } from 'react';
+import { UseSelector, useSelector } from 'react-redux';
+import { selectCart } from '../../redux/slices/cart';
 import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
 import NavTools from '../NavTools/NavTools';
@@ -37,6 +39,10 @@ const Menu = () => {
     document.body.classList.remove('no-scroll');
   }
 
+  //redux
+  const cart = useSelector(selectCart);
+  const cartItem = cart.length;
+
   return (
     <>
       <div className={styles.menu}>
@@ -45,6 +51,7 @@ const Menu = () => {
             <Logo />
             <Nav />
             <NavTools
+              cartItem={cartItem}
               active={active}
               openCart={openCart}
               toggleBurgerMenu={toggleBurgerMenu}
@@ -58,6 +65,7 @@ const Menu = () => {
         active={active}
         openCart={openCart}
         closeBurgerMenu={closeBurgerMenu}
+        cartItem={cartItem}
       />
     </>
   );

@@ -5,7 +5,7 @@ import BtnCall from '../../UI/BtnCall/BtnCall';
 import CartBtn from '../../UI/CartBtn/CartBtn';
 
 const NavTools = (props) => {
-  const { active, toggleBurgerMenu, openCart } = props;
+  const { active, toggleBurgerMenu, openCart, cartItem } = props;
 
   return (
     <div className={styles.navTools}>
@@ -14,7 +14,7 @@ const NavTools = (props) => {
           <FaPhoneAlt />
         </a>
       </BtnCall>
-      <CartBtn onClick={openCart} hideOnMobile={true}>
+      <CartBtn onClick={openCart} hideOnMobile={true} cartItem={cartItem}>
         Запис
       </CartBtn>
       <BtnBurgerMenu active={active} toggleBurgerMenu={toggleBurgerMenu} />
